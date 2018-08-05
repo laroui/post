@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+$primary: purple;
+@import 'node_modules/bootstrap/dist/css/bootstrap.css';
+@import 'node_modules/font-awesome/css/font-awesome.css';
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Boogaloo');
+.btn{
+font-family: 'Boogaloo', cursive;
+  margin-left:10x;
+margin-right:5px;
+margin-bottom:5px;
+padding:2px 2px 2px 2px ;}
+.txt{
+color:#FFF;
+font-family:alfa slab one;}
+
+
+body {
+  color: #FFF;
+  background-color: #FFF;
+  background-image:url('assets/img-back.jpg');
+}
+p{
+font-family:boogaloo;
+color:#FFF;
+font-size:16px;}

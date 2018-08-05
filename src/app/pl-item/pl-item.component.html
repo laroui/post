@@ -1,0 +1,21 @@
+<div class="list-group" [ngStyle]="{'background-color':getColor()}">
+ <div class="row">
+   <div class="col-sm-6  txt">
+  {{item.title}}
+   </div>
+  <div class="col-sm-6 text-right txt"> {{item.created_at| date}}  at {{item.created_at| date:'shortTime'}}</div>
+
+   <p class="col-sm-6">
+     {{item.content}}
+   </p>
+
+
+ </div>
+
+  <button type="button" class="btn btn-success" value="LoveIt" (click)="love(1,item)">Love it !</button>
+
+  <button type="button" class="btn btn-danger" value="LoveIt" (click)="love(2,item)" >Don't Love it ! </button>
+  <div class="text-left  "><h6 style="color:lightcoral">{{item.loveIts}}</h6> </div>
+
+
+</div>
