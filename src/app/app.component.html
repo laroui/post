@@ -1,13 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="posts">Posts</a></li>
+        <li routerLinkActive="active"><a routerLink="add">Add Post</a></li>
+        <li routerLinkActive="active"><a routerLink="auth"><fa-icon [icon]="connecection_icon"></fa-icon></a></li>
 
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="container" >
 
   <h1 class="txt">
-    Welcome to <em> Asteroids & Bacon Blog  </em>!
+    Un Blog
   </h1>
 
-
-<app-post-list [tableau]="list" ></app-post-list>
+  <router-outlet></router-outlet>
 
 </div>
-

@@ -1,30 +1,19 @@
-import { Component } from '@angular/core';
-import {Post} from './Post';
-
+import {Component} from '@angular/core';
+import {AngularFireAuth} from 'angularfire2/auth';
+import {faAtlas} from '@fortawesome/free-solid-svg-icons';
+import {AuthService, User} from './auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent  {
+  user: User;
   title = 'open';
-  post1 = new Post(
-    'What is Lorem Ipsum? ',
-    'Lorem ipsum dolor sit amet, is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
-    5, new Date());
+  connecection_icon = faAtlas;
+  constructor(As: AuthService , Af: AngularFireAuth ) {
+    this.user = Af.auth.currentUser;
 
-  post2 = new Post(
-    'Mon premier titre ',
-    'Dans la jungle des animeaux ... lala llall lalalla lalla lal lal la ',
-    3,
-    new Date());
-  post3 = new Post(
-    'Mon premier titre ',
-    'Lorem ipsum tetur ad, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim',
-    -2,
-    new Date());
-
-  list: Array <Post> = [this.post1, this.post2, this.post3];
-
+  }
 }
